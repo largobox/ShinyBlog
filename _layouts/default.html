@@ -34,6 +34,7 @@
 	    {% for post in site.posts %}
 	      "{{ post.url | slugify }}": {
 	        "title": "{{ post.title | xml_escape }}",
+	        "tags": "{{ post.tags | xml_escape }}",
 	        "url": "{{ post.url | xml_escape }}"
 	      }
 	      {% unless forloop.last %},{% endunless %}

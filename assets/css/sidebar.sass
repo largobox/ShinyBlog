@@ -9,37 +9,35 @@ aside
 	ul
 		font-size: 13px
 
-input
-	outline: none
-	vertical-align: top
-	padding: 5px 10px
-	font-size: 14px
-	height: 24px
-	width: 213px
-	background-color: $bg_color_2
-	border: 1px solid $bg_color
-	border-right: none
-	color: $bg_color
-	border-radius: 4px 0px 0px 4px
-
-	&:focus
-		background-color: $text_color
-
-.search_btn
-	font-size: 15px	
-	border: 1px solid $bg_color
-	background-color: $bg_color
-	color: $bg_color_2
-	padding: 5px 10px
-	display: inline-block
-	height: 24px
-	line-height: 24px
-	border-radius: 0px 4px 4px 0px
-
-	&:hover
+	input
+		outline: none
+		vertical-align: top
+		padding: 5px 10px
+		font-size: 14px
+		height: 24px
+		width: 213px
 		background-color: $bg_color_2
+		border: 1px solid $bg_color
+		border-right: none
 		color: $bg_color
-		cursor: pointer
+		border-radius: 4px 0px 0px 4px
+
+		&:focus
+			background-color: $text_color
+
+	button
+		border-radius: 0px 4px 4px 0px
+		font-size: 15px	
+		border: 1px solid $bg_color
+		background-color: $bg_color
+		color: $bg_color_2
+		padding: 5px 10px
+		line-height: 24px
+
+		&:hover
+			background-color: $bg_color_2
+			color: $bg_color
+			cursor: pointer
 
 .search_tags_cnt
 	margin: 80px 0px 10px
@@ -78,7 +76,7 @@ input
 	padding: 0px 5px 
 	width: 230px
 	margin-left: 4px
-	background-color: $bg_color
+	background-color: $text_color
 	border-radius: 0px 0px 4px 4px
 
 	b
@@ -88,14 +86,14 @@ input
 		line-height: 30px
 
 	li:not(:last-child)		
-		border-bottom: 1px solid $text_color
+		border-bottom: 1px solid $bg_color
 
 	a
 		margin: 5px 0px
-		padding: 5px
+		padding: 10px 5px
 		border-radius: 4px
 		display: inline-block
-		color: $text_color
+		color: $bg_color
 		text-decoration: none
 
 		&:hover
