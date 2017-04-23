@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<ul class = 'posts_el_list'>
+	{% for post in site.posts %}	
+		{% include post_el.html post=post %}
+	{% endfor %}
+</ul>

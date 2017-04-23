@@ -1,4 +1,4 @@
-.posts_cnt
+.base_cnt
 	min-height: 600px
 	margin: 60px auto
 	width: $app_base_weight
@@ -13,18 +13,26 @@ main
 		color: $text_color
 
 	li
+		vertical-align: top
 		display: inline-block
 		width: 320px
 		height: 440px
 		margin: 0px 20px 20px 0px
 
+.posts_el_list
+	
+	a
+		text-decoration: none
+
 $date_h: 24px
 
 .posts_el_head
-	padding-left: 177px
+	position: relative
+	z-index: 1
+	padding-left: 160px
 
 .posts_el_date
-	width: 70px
+	width: 87px
 	vertical-align: top
 	text-align: center
 	padding: 0px 10px
@@ -50,10 +58,15 @@ $date_h: 24px
 	border-color: transparent transparent transparent $bg_color
 
 .posts_el_body
-	padding: 20px
-	height: 400px
+	position: relative
+	padding: 10px 20px
+	height: 440px
 	background-color: $bg_color
 	border-radius: 4px
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0, 1)
+
+	&:hover
+		box-shadow: 1px 2px 10px 0px rgba(255,255,255, 1)
 
 	img
 		width: 100%
@@ -84,7 +97,10 @@ $date_h: 24px
 		height: auto
 
 .posts_el_info_cnt
-	padding: 20px 0px 0px 170px
+	position: absolute
+	bottom: 0px
+	right: 0px
+	padding: 0px 10px 10px 0px
 
 	li
 		margin: 0px 5px 0px 0px

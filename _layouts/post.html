@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class = 'post_cnt'>
+	<div class = 'post_inner_cnt'>
+		<div class = 'post_head'>
+			<a href = '{{assets_path}}/'>	
+				<div class = 'back_btn_cnt'>
+					{% include icons/back.svg %}
+				</div>
+			</a>
+			<div class = 'post_date_cnt'>
+				<div class = 'l_trngl'></div>
+				<span>
+					{{ page.date | date: '%y' }}
+					{% include functions/month_translate_to_rus.html %}
+					{{ page.date | date: '%d' }}
+				</span>
+				<div class = 'r_trngl'></div>
+			</div>			
+		</div>
+
+		<div class = 'post_body'>
+			<h2>{{ page.title }}</h2>
+			{{ content }}
+		</div>
+		<div class = 'post_bot'>
+			<a href = '{{assets_path}}/comments?id=1'>Комментарии (13)</a>
+		</div>
+	</div>
+</div>

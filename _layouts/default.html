@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+	<meta charset = 'UTF-8'>
+	<title>Document</title>
+	<link rel = 'stylesheet' href = '{{assets_path}}/assets/css/all.css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	
+<header>
+	<nav>	
+		<ul id = 'header_menu'>
+			<li>Блог варвара</li>
+			<li><a id = 'blog_root' href = '{{assets_path}}/'>Читать блог</a></li>
+			<li><a id = 'about_root' href = '{{assets_path}}/about' >О блоге</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class = 'base_cnt'>
+	<main>
+		{{ content }}
+	</main>
+	{% include sidebar.html %}
+</section>
+
+<footer>
+	<p>© Блог варвара</p>
+</footer>	
+
+	<script>
+	  window.store = {
+	    {% for post in site.posts %}
+	      "{{ post.url | slugify }}": {
+	        "title": "{{ post.title | xml_escape }}",
+	        "url": "{{ post.url | xml_escape }}"
+	      }
+	      {% unless forloop.last %},{% endunless %}
+	    {% endfor %}
+	  };
+	</script>
+
+	<script src = '{{assets_path}}/assets/js/base.js'></script>
+	<script src = '{{assets_path}}/assets/js/search_by_word.js'></script>
+	
+</body>
+</html>

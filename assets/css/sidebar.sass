@@ -4,11 +4,13 @@ aside
 	display: inline-block
 
 .search_cnt
+	position: relative
 
 	ul
 		font-size: 13px
 
-.search_input
+input
+	outline: none
 	vertical-align: top
 	padding: 5px 10px
 	font-size: 14px
@@ -19,6 +21,9 @@ aside
 	border-right: none
 	color: $bg_color
 	border-radius: 4px 0px 0px 4px
+
+	&:focus
+		background-color: $text_color
 
 .search_btn
 	font-size: 15px	
@@ -57,6 +62,7 @@ aside
 
 		&:hover
 			cursor: pointer
+			box-shadow: 0 0 1px 1px rgba(255,255,255, 1)
 
 .tag_search_btn
 	margin-left: 162px
@@ -64,3 +70,34 @@ aside
 	color: $bg_color_2
 	border-radius: 4px
 	border: 1 solid $bg_color
+
+#search_results
+	position: absolute
+	top: 36px
+	box-sizing: border-box
+	padding: 0px 5px 
+	width: 230px
+	margin-left: 4px
+	background-color: $bg_color
+	border-radius: 0px 0px 4px 4px
+
+	b
+		margin-left: 5px
+		display: inline-block
+		height: 30px
+		line-height: 30px
+
+	li:not(:last-child)		
+		border-bottom: 1px solid $text_color
+
+	a
+		margin: 5px 0px
+		padding: 5px
+		border-radius: 4px
+		display: inline-block
+		color: $text_color
+		text-decoration: none
+
+		&:hover
+			background-color: $bg_color_2
+			color: $bg_color
