@@ -3,28 +3,94 @@
 	width: calc(100% - 20px)
 	padding: 	20px 20px 50px
 	border-radius: 4px
-	background-color: $bg_color
 
-	li
-		padding: 10px 10px
-		border-radius: 4px
-		width: auto
+	ul
+		li
+			position: relative
+			background-color: $bg_color
+			padding: 10px 10px
+			border-radius: 4px
+			margin-bottom: 20px
+
+			&:hover			
+				box-shadow: 0 0 10px 1px rgba(255,255,255, 1)
+
+			img
+				display: inline-block
+				border-radius: 4px
+				width: 162px
+				height: 100px
 	
-	h3
+	h2
+		background-color: $bg_color
 		text-align: center
 		font-size: 16px
 		margin-bottom: 20px
 		padding: 10px 0px
 		border-radius: 4px
 
-	a
+.result_search_el_cnt
+	vertical-align: top
+	box-sizing: border-box
+	display: inline-block
+	width: calc(100% - 162px)
+	padding: 0px 10px
+	height: 100px
+
+.result_search_el_top
+	height: 20px
+
+	ul
+		display: inline-block
+		li
+			padding: 4px 8px
+			margin-right: 4px
+			background-color: $text_color
+			color: $bg_color
+			display: inline-block
+			font-size: 12px
+
+			&:hover
+				box-shadow: none
+
+.result_search_el_date_cnt
+	position: absolute
+	right: 10px
+	top: 0
+	display: inline-block
+
+	span
+		padding: 0px 5px
+		display: inline-block
+		line-height: 20px
+		font-size: 12px
+		background-color: $text_color
+		color: $bg_color	
+
+.result_search_el_l_trngl
+	vertical-align: top
+	display: inline-block
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 0 12px 20px 0
+	border-color: transparent $text_color transparent transparent
+
+.result_search_el_r_trngl
+	vertical-align: top
+	display: inline-block
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 20px 12px 0 0
+	border-color: $text_color transparent transparent transparent
+
+.result_search_el_bot
+	height: 80px
+
+	h3
+		padding: 10px 0px 5px
 		font-size: 14px
 
-		&:hover
-			color: $bg_color
-			text-decoration: none
-
-		&:hover li
-			background-color: $bg_color_2
-
-
+	p
+		font-size: 12px
