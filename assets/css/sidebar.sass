@@ -33,48 +33,42 @@ aside
 		color: $bg_color_2
 		padding: 5px 10px
 		line-height: 24px
+		outline: none
 
 		&:hover
 			background-color: $bg_color_2
 			color: $bg_color
 			cursor: pointer
 
+form.search_tags_form
+	margin: 0px 5px
+
 .search_tags_cnt
 	margin: 80px 0px 10px
-	padding: 10px 0px 5px
+	padding: 12px 0px
 	border-top: 1px solid $bg_color
 	border-bottom: 1px solid $bg_color
-	
+
 	li
 		display: inline-block
-		margin-bottom: 8px
-		padding: 5px 10px
-		border-radius: 4px
-		color: $bg_color
+		margin-bottom: 3px
+
+	label
+		display: inline-block
+		padding: 8px 12px
 		background-color: $bg_color_2
+		color: $bg_color
+		border-radius: 4px
 		border: 1px solid $bg_color
 
-		&.selected
-			background-color: $text_color
-			box-shadow: 0 0 1px 1px rgba(255,255,255, 1)
-
 		&:hover
+			box-shadow: 0 0 5px 1px rgba(255,255,255, .5)
 			cursor: pointer
-			box-shadow: 0 0 1px 1px rgba(255,255,255, 1)
 
-.tag_search_btn
-	padding: 10px 10px
-	font-size: 15px
-	margin-left: 162px
-	background-color: $bg_color
-	color: $bg_color_2
-	border-radius: 4px
-	border: 1 solid $bg_color
-
-	&:hover
-		background-color: $bg_color_2
-		color: $bg_color
-		cursor: pointer
+		&.selected
+			color: $bg_color
+			background-color: $text_color
+			box-shadow: 0 0 5px 1px rgba(255,255,255, .5)
 
 #search_results
 	position: absolute
@@ -91,6 +85,7 @@ aside
 		display: inline-block
 		height: 30px
 		line-height: 30px
+		color: $bg_color
 
 	li:not(:last-child)		
 		border-bottom: 1px solid $bg_color
@@ -106,3 +101,9 @@ aside
 		&:hover
 			background-color: $bg_color_2
 			color: $bg_color
+
+.search_by_tags_btn_cnt
+	text-align: right
+	
+	button
+		border-radius: 4px

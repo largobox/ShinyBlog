@@ -2,7 +2,7 @@ previewSearchResults()
 searchPageResults()
 
 function searchPageResults(){
-	if(window.location.href.includes('search')){
+	if(window.location.href.includes('search_by_words')){
 		q = getSearchQueryVariable('query')
 		displaySearchResultForPage(searchPerform(q))
 	}
@@ -36,7 +36,7 @@ function searchPerform(search_word){
 				'url': window.store[post].url,
 				'number': window.store[post].number,
 				'title': window.store[post].title,
-				'desc': window.store[post].desc,
+				'desc': window.store[post].desc.length > 150 ? window.store[post].desc.substring(0,149) + '...' : window.store[post].desc,
 				'date': window.store[post].date,
 				'tags': window.store[post].tags
 			})
@@ -92,7 +92,6 @@ function displaySearchResultForPage(results){
 		searchResults.innerHTML = '<b>Совпадений нет</b>'
 	}
 }
-
 
 function customDateFormat(str){
 	d = str.substring(9, 10)

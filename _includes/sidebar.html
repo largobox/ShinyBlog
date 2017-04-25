@@ -1,18 +1,31 @@
 <aside>
 	<div class = 'search_cnt'>
-		<form action = '/search.html' method = 'get' autocomplete = 'off'>
+
+		<form action = '/search_by_words' method = 'get' autocomplete = 'off'>
 			<input type = 'text' id = 'search_input_field' name = 'query'>
 			<button type = 'submit'>Найти</button>
 		</form>
+
 		<ul id = 'search_results'></ul>
-		<ul class = 'search_tags_cnt'>
-			<li>Веб</li>
-			<li>Игры</li>
-			<li>Разработка</li>
-			<li>Идея фикс</li>
-			<li>Стишок</li>
-			<li>Анализ</li>
-		</ul>
-		<div class = 'tag_search_btn' id = 'search_by_tags_btn'>Искать по тэгам</div>
+
+		<form class = 'search_tags_form' action = '/search_by_tags' method = 'get'>
+			<ul class = 'search_tags_cnt'>
+				{% for tag in site.data.tags %}
+					<li>
+						<label for = 'tag_{{ tag.number }}'>{{ tag.name }}</label>
+						<input type = 'text' 
+									 id = 'tag_{{ tag.number }}' 
+									 name = 'tag_name_{{ tag.number }}' 
+									 value = '{{ tag.name }}' 
+									 hidden 
+									 disabled>
+					</li>
+				{% endfor %}
+			</ul>
+			<div class = 'search_by_tags_btn_cnt'>
+				<button type = 'submit'>Искать по тэгам</button>
+			</div>
+		</form>
+
 	</div>
 </aside>

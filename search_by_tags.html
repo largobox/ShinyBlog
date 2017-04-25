@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class = 'result_search_by_word_cnt'>
+	
+	<div class = 'result_search_header'>
+		<h2>Результаты поиска по тэгам:</h2>
+		<ul id = 'tags_for_filtering'></ul>
+	</div>
+
+	<ul id = 'result_search_el_list'>
+		{% for post in site.posts %}
+ 			<a href = '{{ post.url }}' data-tags = '{{ post.tags | jsonify }}'>
+ 				<li>
+ 					<img src = './assets/img/posts/{{ post.number }}/thumb.jpg' alt = 'Some text'>
+ 					<div class = 'result_search_el_cnt'>
+ 	 					<div class = 'result_search_el_top'>
+ 	 						<ul class = 'result_search_el_tags_cnt'>
+ 	 							{% for tag in post.tags %}
+ 	 								<li>{{ tag }}</li>
+ 	 							{% endfor %}
+ 	 						</ul>
+							<div class = 'result_search_el_date_cnt'>
+								<div class = 'result_search_el_l_trngl'></div>
+								<span>
+									{{ post.date | date: '%y' }}
+									{% include functions/month_translate_to_rus.html %}
+									{{ post.date | date: '%d' }}
+								</span>
+								<div class = 'result_search_el_r_trngl'></div>
+   						</div>
+ 						</div>
+ 						<div class = 'result_search_el_bot'>
+ 							<h3>{{ post.title }}</h3>
+ 							<p>{{ post.desc | truncate: 150 }}</p>
+ 						</div>
+ 					</div>
+ 				</li>
+  		</a>
+		{% endfor %}
+	</ul>
+</div>

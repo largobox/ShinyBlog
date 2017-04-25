@@ -9,12 +9,20 @@ function activeHeaderMenuElement(){
 
 function searchByTags(){
 	tagsCnt = document.getElementsByClassName('search_tags_cnt')
-	tags = tagsCnt[0].getElementsByTagName('li')
+	tags = tagsCnt[0].getElementsByTagName('label')
 
 	for(var i = 0; i < tags.length; i++){
 		tags[i].onclick = function(e){
-			tagName = this.innerText
-			this.className == 'selected' ? this.classList.remove('selected') : this.className += 'selected'
+
+			var targetInput = document.getElementById(this.htmlFor)
+
+			if(this.className == 'selected'){
+				this.classList.remove('selected')
+				targetInput.disabled = true
+			} else {
+				this.className += 'selected'
+				targetInput.disabled = false
+			} 
 		}
 	}
 }

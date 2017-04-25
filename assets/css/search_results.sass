@@ -10,7 +10,7 @@
 			background-color: $bg_color
 			padding: 10px 10px
 			border-radius: 4px
-			margin-bottom: 20px
+			margin-bottom: 12px
 
 			&:hover			
 				box-shadow: 0 0 10px 1px rgba(255,255,255, 1)
@@ -21,12 +21,15 @@
 				width: 162px
 				height: 100px
 	
+.result_search_header
+	background-color: $bg_color
+	border-radius: 4px
+	margin-bottom: 30px
+
 	h2
-		background-color: $bg_color
 		text-align: center
 		font-size: 16px
-		margin-bottom: 20px
-		padding: 10px 0px
+		padding: 10px 0px 10px
 		border-radius: 4px
 
 .result_search_el_cnt
@@ -44,11 +47,11 @@
 		display: inline-block
 		li
 			padding: 4px 8px
-			margin-right: 4px
+			margin-right: 3px
 			background-color: $text_color
 			color: $bg_color
 			display: inline-block
-			font-size: 12px
+			font-size: 10px
 
 			&:hover
 				box-shadow: none
@@ -94,3 +97,22 @@
 
 	p
 		font-size: 12px
+
+// SEARCH BY TAGS
+
+#tags_for_filtering
+	padding: 10px
+
+	span
+		display: inline-block
+		border-radius: 4px
+		margin-right: 5px
+		padding: 5px 10px
+		background-color: $text_color
+		color: $bg_color
+		font-size: 14px
+
+	p
+		font-size: 14px
+		color: $text_color
+		font-weight: bold
