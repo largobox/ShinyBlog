@@ -28,10 +28,14 @@ github_username:  jekyll
 markdown: kramdown
 # theme: minima
 gems:
-  - jekyll-feed
+  # - jekyll-feed
+  - octopress-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
-
 sass:
   sass_dir: assets/css
+
+pagination:
+  per_page: 4
+  limit: false

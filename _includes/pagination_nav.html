@@ -1,0 +1,21 @@
+<div class = 'pagination_cnt'>
+	<ul>
+			{% if paginator.previous_page_path %}
+				<a href = '{{paginator.previous_page_path}}' class = 'prev_arrow'>
+					<li>
+						{% include icons/next.svg %}
+					</li>
+				</a>
+			{% endif %}
+		<li>
+			<span>{{paginator.page}}</span>
+		</li>
+			{% if paginator.next_page_path %}
+				<a href = '{{paginator.next_page_path}}'>
+					<li>
+						{% include icons/next.svg %}
+					</li>
+				</a>
+			{% endif %}
+	</ul>
+</div>
