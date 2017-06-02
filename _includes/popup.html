@@ -1,0 +1,35 @@
+<div class = 'popup_cnt' id = 'popup'>
+	<div class = 'popup_message_cnt'>
+		<div class = 'popup_message_head'>
+			<div class = 'popup_message_head_el'><h2>Регистрация</h2></div>
+			<div class = 'popup_message_head_el' id = 'close_popup_btn'>{% include icons/close.svg %}</div>
+		</div>
+		<div class = 'popup_message_body'>
+			<form name = 'registration_form'>
+				<div class = 'registration_form_fields_cnt'>
+					<label for = 'email'>Email</label>
+					<input name = 'email' type = 'text'>
+				</div>
+				<div class = 'registration_form_fields_cnt'>
+					<label for = 'email'>Пароль</label>
+					<input name = 'email' type = 'text'>
+				</div>				
+				<div class = 'registration_form_btn_cnt'>
+					<button id = 'send_registration_btn'>Отправить</button>	
+				</div>
+			</form>
+
+			<h3>Регистрация через соц. сети:</h3>
+			<ul>
+				<li>
+					<a href = 'https://shrouded-ravine-70922.herokuapp.com/vk_login'>
+						{% include icons/social/vk.svg %}
+					</a>
+				</li>
+				<li>{% include icons/social/fb.svg %}</li>
+				<li>{% include icons/social/twitter.svg %}</li>
+				<li>{% include icons/social/instagram.svg %}</li>
+			</ul>
+		</div>		
+	</div>
+</div>

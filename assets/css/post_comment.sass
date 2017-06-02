@@ -1,0 +1,81 @@
+.post_comment_cnt
+	
+	form
+		margin-right: 20px
+
+	ul
+		padding: 20px 20px 0px 0px
+
+		li
+			padding: 10px
+			border-radius: 4px
+			background-color: $bg_color
+			font-size: 14px
+			margin-bottom: 8px
+
+	img
+		display: inline-block
+		background-color: red
+		width: 50px
+		height: 50px
+		border-radius: 8px
+
+.comment_cnt
+	padding-left: 10px
+	display: inline-block
+	vertical-align: top
+	width: calc(100% - 50px - 10px - 4px)
+
+.comment_head
+	font-weight: bold
+	display: flex
+	justify-content: space-between
+
+.author_name
+	font-size: 14px
+
+.comment_date
+	font-size: 12px
+
+.comment_body
+	padding-top: 8px
+	line-height: 18px
+	font-size: 16px
+
+// FORM
+
+.comment_form_fields_cnt
+	padding: 5px
+	background-color: $bg_color
+	border-radius: 4px	
+
+	textarea
+		box-sizing: border-box
+		width: 100%
+		outline: none
+		background-color: $bg_color_2
+		border: none
+		color: $bg_color
+		padding: 8px 12px
+		font-size: 16px
+
+.comment_form_btn_cnt
+	margin-top: 10px
+	text-align: right
+
+	button
+		background-color: $bg_color
+		border: none
+		color: $bg_color_2
+		padding: 10px 20px
+		border-radius: 8px
+		font-size: 16px
+		transition: .3s
+		border: 1px solid $bg_color
+		outline: none
+
+		&:hover
+			background-color: $bg_color_2
+			color: $bg_color
+			cursor: pointer
+			transition: .3s

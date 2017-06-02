@@ -25,8 +25,23 @@ layout: default
 			<h2>{{ page.title }}</h2>
 			{{ content }}
 		</div>
-		<div class = 'post_bot'>
-			<a href = '{{assets_path}}/comments?id=1'>Комментарии (13)</a>
-		</div>
 	</div>
 </div>
+
+<div class = 'post_comment_cnt'>
+	<ul id = 'post_comments'></ul>
+
+	<form name = 'comment_form'>
+		<input name = 'user_id' type = 'text' hidden>
+		<input name = 'post_id' type = 'text' value = '{{ page.number }}' hidden>	
+		<div class = 'comment_form_fields_cnt'>
+			<textarea name = 'comment_body' rows = '6' placeholder = 'Что вы думаете об этой статье?'></textarea>
+		</div>
+		<div class = 'comment_form_btn_cnt'>
+			<button id = 'send_comment_btn'>Добавить</button>	
+		</div>
+	</form>
+
+</div>
+
+<script src = '{{assets_path}}/assets/js/post_comments.js'></script>
