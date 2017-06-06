@@ -166,16 +166,3 @@ function createPostView(postId, ip){
 		console.log('Error: ' + this.status + ' method createPostView failed')
 	}
 }
-
-
-function getPostInfo(postId){
-	var xhrObject = new XMLHttpRequest()
-	xhrObject.open('GET', serverAddress + 'post_info.json?post_id=' + postId, true)
-	xhrObject.send()
-
-	xhrObject.onload = function(){}
-
-	xhrObject.onerror = function(){
-		console.log('Error: ' + this.status + 'method getPostInfo failed')
-	}	
-}
