@@ -1,0 +1,35 @@
+.notification_cnt
+	margin: 5px
+	padding: 4px
+	position: fixed
+	left: 0px
+	top: -500px
+	width: 200px
+	border-radius: 4px
+	background-color: $error_bg_color
+	border: 1px solid rgba(0,0,0, .4)
+	transition: 1s
+
+.notification_head
+	text-align: right
+	
+.notification_close_btn
+	display: inline-block
+	height: 16px
+	width: 16px
+	
+	svg
+		opacity: .7
+
+		&:hover
+			cursor: pointer
+			opacity: 1
+
+.notification_body
+	margin: 0px 5px 5px
+
+	span
+		font-size: 14px
+
+.notification_cnt.active
+	top: 0px		

@@ -6,7 +6,6 @@ initCommentData()
 queryGetPostComments()
 handleCommentBtn()
 createPostView(postId, localStorage.userIP)
-getPostInfo(postId)
 
 
 // COMMENTS
@@ -105,7 +104,7 @@ function handleCommentBtn(){
 	btn = document.getElementById('send_comment_btn')	
 	btn.onclick = function(e){
 		e.preventDefault()
-		if (checkUserRegistration()){
+		if (checkUserRegistration() && validationsForCommentBody()){
 			queryAddComment()
 		}
 	}
