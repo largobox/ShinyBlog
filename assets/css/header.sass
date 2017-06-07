@@ -1,20 +1,22 @@
-$header_height: 36px
-
 header
-	height: $header_height
 	background-color: $bg_color
 
-	ul
-		width: $app_base_weight
+	nav
+		width: 1020px
 		margin: auto
-		line-height: $header_height
+		text-align: right
+		@media(max-width: 1020px)
+			width: 100%
+		@media(max-width: 400px)
+			text-align: center
+
+	ul
 
 		a
 			display: block
 			text-decoration: none
 			color: $text_color
 			font-size: 15px
-			height: 36px
 			text-align: center
 
 			&:hover
@@ -27,11 +29,5 @@ header
 
 		li
 			display: inline-block
-
-			&:nth-child(1)
-				text-align: left
-				width: calc(100% - 240px)
-			&:nth-child(2)
-				width: 120px
-			&:nth-child(3)
-				width: 120px
+			line-height: 36px
+			width: 120px
