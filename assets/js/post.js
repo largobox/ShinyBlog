@@ -56,7 +56,7 @@ function dateFormatForComment(date){
 
 function initCommentData(){
 	if(localStorage.localUserId !== undefined){
-		document.getElementsByName('user_id')[0].setAttribute('value', '1')
+		document.getElementsByName('user_id')[0].setAttribute('value', localStorage.localUserId)
 	}
 }
 

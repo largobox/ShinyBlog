@@ -1,4 +1,4 @@
-<div class = 'popup_cnt' id = 'popup'>
+<div class = 'popup_cnt animation_target' id = 'popup'>
 	<div class = 'popup_message_cnt'>
 		<div class = 'popup_message_head'>
 			<div class = 'popup_message_head_el'><h2>Регистрация</h2></div>
@@ -20,15 +20,22 @@
 			</form>
 
 			<h3>Регистрация через соц. сети:</h3>
-			<ul>
+			<ul id = 'social_links_cnt'>
 				<li>
 					<a href = 'https://shrouded-ravine-70922.herokuapp.com/vk_login'>
 						{% include icons/social/vk.svg %}
 					</a>
 				</li>
-				<li>{% include icons/social/fb.svg %}</li>
-				<li>{% include icons/social/twitter.svg %}</li>
-				<li>{% include icons/social/instagram.svg %}</li>
+				<li>
+					<a href = 'https://shrouded-ravine-70922.herokuapp.com/fb_login'>
+						{% include icons/social/fb.svg %}
+					</a>
+				</li>
+				<li>
+					<a href = 'https://shrouded-ravine-70922.herokuapp.com/tw_login?return_url=http://localhost:4000/2017/03/05/post_4.html'>
+						{% include icons/social/twitter.svg %}
+					</a>
+				</li>
 			</ul>
 		</div>		
 	</div>

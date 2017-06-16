@@ -5,7 +5,7 @@ function validationsForCommentBody(){
 						checkMaxLengthCommentBodyField(str) ? 'Максимальная длина комментария 1000 символов' : ''
 
 	if(message){
-		showNotificationCnt(message)
+		showNotificationCnt(message, 'error')
 		return false
 	}
 	return true
@@ -20,7 +20,6 @@ function checkEmptyCommentBodyField(str){
 }
 
 function checkMaxLengthCommentBodyField(str){
-	console.log(str.length)
 	if(str.length < 1000){
 		return false
 	} else {
