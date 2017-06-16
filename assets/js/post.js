@@ -6,9 +6,17 @@ initCommentData()
 queryGetPostComments()
 handleCommentBtn()
 createPostView(postId, localStorage.userIP)
+handleBackBtn()
 
 
-// COMMENTS
+
+function handleBackBtn(){
+	backBtn = document.getElementById('back_btn_link')
+	backBtn.onclick = function(e){
+		e.preventDefault()
+		window.history.back()
+	}
+}
 
 
 function writeUserIpToLocalStorage(){
@@ -24,9 +32,12 @@ function writeUserIpToLocalStorage(){
 	}
 
 	xhrObject.onerror = function(){
-		console.log('Error: ' + this.status + ' method myIP failed')
+		console.log('Error: ' + this.status + ' method writeUserIpToLocalStorage failed')
 	}
 }
+
+
+// COMMENTS
 
 
 function dateFormatForComment(date){

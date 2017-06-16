@@ -37,6 +37,8 @@ function createLocalUser(){
 		localStorage.localUserPictureUrl = url.get('picture_url')
 		localStorage.localUserFirstName = url.get('first_name')
 		localStorage.localUserSecondName = url.get('second_name')
+
+		initCommentData()
 		showNotificationCnt('Вы были зарегистрированы', 'success')
 	}
 }
