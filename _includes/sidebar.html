@@ -1,14 +1,14 @@
 <aside>
 	<div class = 'search_cnt'>
 
-		<form action = './search_by_words' method = 'get' autocomplete = 'off'>
+		<form action = '{{ site.url }}/search_by_words' method = 'get' autocomplete = 'off'>
 			<input type = 'text' id = 'search_input_field' name = 'query'>
 			<button type = 'submit'>Найти</button>
 		</form>
 
 		<ul id = 'search_results'></ul>
 
-		<form class = 'search_tags_form' action = './search_by_tags' method = 'get'>
+		<form class = 'search_tags_form' action = '{{ site.url }}/search_by_tags' method = 'get'>
 			<ul class = 'search_tags_cnt'>
 				{% for tag in site.data.tags %}
 					<li>
