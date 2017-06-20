@@ -4,7 +4,7 @@ paginate: true
 ---
 
 <ul class = 'posts_el_list'>
-	{% for post in site.posts %}	
+	{% for post in paginator.posts %}	
 		{% include post_el.html post=post %}
 	{% endfor %}
 </ul>
