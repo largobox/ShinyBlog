@@ -40,7 +40,7 @@
 	  window.store = {
 	    {% for post in site.posts %}
 	      "{{ post.url | slugify }}": {
-	        "url": "{{ post.url | xml_escape }}",
+	        "url": "{{ site.url }}{{ post.url | xml_escape }}",
 	        "number": "{{ post.number | xml_escape }}",
 	        "title": "{{ post.title | xml_escape }}",
 	        "desc": "{{ post.desc | xml_escape }}",

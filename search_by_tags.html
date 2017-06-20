@@ -11,7 +11,7 @@ layout: default
 
 	<ul id = 'result_search_el_list'>
 		{% for post in site.posts %}
- 			<a href = '{{ post.url }}' data-tags = '{{ post.tags | jsonify }}'>
+ 			<a href = '{{ site.url }}{{ post.url }}' data-tags = '{{ post.tags | jsonify }}'>
  				<li>
  					<img src = './assets/img/posts/{{ post.number }}/thumb.jpg' alt = 'Some text'>
  					<div class = 'result_search_el_cnt'>
