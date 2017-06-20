@@ -1,7 +1,7 @@
 var serverAddress = 'https://shrouded-ravine-70922.herokuapp.com/'
 
 activeHeaderMenuElement()
-sendPostsIdsForCurrentPage()
+// sendPostsIdsForCurrentPage()
 
 
 function activeHeaderMenuElement(){
@@ -39,7 +39,7 @@ function queryPostDataForCurrentPage(postsIds){
 	}
 
 	xhrObject.onerror = function(){
-		console.log('Error: ' + this.status + ' method getPostsInfo failed')
+		console.log('Error: ' + this.status + ' method queryPostDataForCurrentPage failed')
 	}
 }
 
