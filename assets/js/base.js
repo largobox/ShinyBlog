@@ -5,9 +5,7 @@ sendPostsIdsForCurrentPage()
 
 
 function activeHeaderMenuElement(){
-
 	currentUrl = window.location.pathname
-	console.log(currentUrl)
 	if (currentUrl === '/'){ document.getElementById('blog_root').className += 'active'}
 	if (currentUrl === '/about'){ document.getElementById('about_root').className += 'active'}
 }
