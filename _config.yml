@@ -38,3 +38,4 @@ sass:
   sass_dir: assets/css
 
 paginate: 4
+paginate_path: '/blog/page:num/'
