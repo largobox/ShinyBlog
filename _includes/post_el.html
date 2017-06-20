@@ -17,7 +17,7 @@
 						<li>{{ tag }}</li>
 					{% endfor %}
 				</ul>
-				<img src = '{{assets_path}}/assets/img/posts/{{post.number}}/thumb.jpg' alt = 'Some text'>
+				<img src = './assets/img/posts/{{post.number}}/thumb.jpg' alt = 'Some text'>
 				<h2>{{ post.title }}</h2>
 				<p>{{ post.desc | truncate: 120 }}</p>
 				<ul class = 'posts_el_info_cnt'>
