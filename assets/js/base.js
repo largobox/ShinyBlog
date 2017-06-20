@@ -1,7 +1,7 @@
 var serverAddress = 'https://shrouded-ravine-70922.herokuapp.com/'
 
 activeHeaderMenuElement()
-// sendPostsIdsForCurrentPage()
+sendPostsIdsForCurrentPage()
 
 
 function activeHeaderMenuElement(){

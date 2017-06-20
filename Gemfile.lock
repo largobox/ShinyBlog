@@ -17,6 +17,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
@@ -27,10 +28,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    octopress-hooks (2.6.2)
-      jekyll (>= 2.0)
-    octopress-paginate (1.2.0)
-      octopress-hooks
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -46,7 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.3.0)
-  octopress-paginate
+  jekyll-paginate
 
 RUBY VERSION
    ruby 2.2.5p319
