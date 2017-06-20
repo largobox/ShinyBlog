@@ -1,7 +1,7 @@
 <div class = 'pagination_cnt'>
 	<ul>
 			{% if paginator.previous_page_path %}
-				<a href = '{{ site.url }}/{{paginator.previous_page_path}}' class = 'prev_arrow'>
+				<a href = '{{ site.url }}{{paginator.previous_page_path}}' class = 'prev_arrow'>
 					<li>
 						{% include icons/next.svg %}
 					</li>
@@ -11,7 +11,7 @@
 			<span>{{paginator.page}}</span>
 		</li>
 			{% if paginator.next_page_path %}
-				<a href = '{{ site.url }}/{{paginator.next_page_path}}'>
+				<a href = '{{ site.url }}{{paginator.next_page_path}}'>
 					<li>
 						{% include icons/next.svg %}
 					</li>
