@@ -1,20 +1,5 @@
 - number: 1
-  name: Тэг 1
+  name: IT советы
 
 - number: 2
-  name: Тэг 2
-
-- number: 3
-  name: Тэг 3
-
-- number: 4
-  name: Тэг 4
-
-- number: 5
-  name: Тэг 5
-
-- number: 6
-  name: Тэг 6
-
-- number: 7
-  name: Тэг 7
+  name: Новичку
